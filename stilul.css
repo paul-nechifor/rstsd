@@ -46,11 +46,8 @@ background: url(images/banda.gif) repeat-x;
 
 .galerie {
 	padding:10px; 
-	border:1px solid #000; 
-	border-width:1px 0; 
-	width:500px; 
 	height:600px; 
-	margin:15px auto;	
+	margin:5px auto;	
 }
 .imagine_gal {
 	margin:5px; padding:5px;
