@@ -11,7 +11,9 @@ margin-top:-8px;
 margin-bottom:50px;
 color:#BEA26D;
 }
+h3 {
 
+}
 #lista_meniu {
 list-style:none;
 margin:15px 0 0 0; padding:0;	
@@ -42,4 +44,39 @@ div#textul {
 background: url(images/banda.gif) repeat-x;
 }
 
-sup { font-size:13px;}
+.galerie {
+	padding:10px; 
+	border:1px solid #000; 
+	border-width:1px 0; 
+	width:500px; 
+	height:600px; 
+	margin:15px auto;	
+}
+.imagine_gal {
+	margin:5px; padding:5px;
+	border:2px solid #767A2E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

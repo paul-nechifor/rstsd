@@ -8,6 +8,47 @@
 
 <body style="background:url(images/Template6_03.gif) repeat-x #d4c6a6; margin:0;">
 
+<script language="javascript" type="text/javascript">
+
+var curent = [1,1];
+var maxim = [54,7];
+
+function inainte(gal,str)
+{
+	imaginea = document.getElementById("loc"+gal);
+	nr = document.getElementById("nr"+gal);
+	if (curent[gal-1]<maxim[gal-1]) 
+	{
+		nr.innerHTML = ++curent[gal-1];
+		imaginea.src = str + curent[gal-1] + ".jpg";
+	}
+}
+function inapoi(gal,str)
+{
+	imaginea = document.getElementById("loc"+gal);
+	nr = document.getElementById("nr"+gal);	
+	if (curent[gal-1]>1) 
+	{
+		nr.innerHTML = --curent[gal-1];
+		imaginea.src = str + curent[gal-1] + ".jpg";
+	}
+}
+function ultima(gal,str)
+{
+	imaginea = document.getElementById("loc"+gal);
+	nr = document.getElementById("nr"+gal);	
+	nr.innerHTML = curent[gal-1] = maxim[gal-1];
+	imaginea.src = str + maxim[gal-1] + ".jpg";
+}
+
+function prima(gal,str)
+{
+	imaginea = document.getElementById("loc"+gal);
+	nr = document.getElementById("nr"+gal);	
+	nr.innerHTML = curent[gal-1] = 1;
+	imaginea.src = str + 1 + ".jpg";
+}
+</script>
 <table id="principal" width="950" border="0" cellpadding="0" cellspacing="0" align="center">
 <tr>
 	<td valign="top">
@@ -24,6 +65,37 @@
 <div id="textul">			
 	<h2>Galerie Foto</h2>
 	
+	<div id="galerie1" class="galerie">
+		<h3 align="center">Revolutie 1989 [<span id="nr1">1</span>/54]</h3>
+		<form action="" id="bg1">
+		<table align="center" cellpadding="1" cellspacing="0" width="400">
+		<tr>
+			<td width="80"><div align="center"><input type="button" name="p11" value="Prima" onclick="prima(1, 'galerie/revolutie_bucuresti/')" /></div></td>
+			<td width="120"><div align="center"><input type="button" name="p12" value="Inapoi" onclick="inapoi(1, 'galerie/revolutie_bucuresti/')" /></div></td>
+			<td width="120"><div align="center"><input type="button" name="p13" value="Inainte" onclick="inainte(1, 'galerie/revolutie_bucuresti/')" /></div></td>
+			<td width="80"><div align="center"><input type="button" name="p14" value="Ultima" onclick="ultima(1, 'galerie/revolutie_bucuresti/')" /></div></td>
+		</tr>
+		</table>
+		</form>
+		<div align="center"><img id="loc1" src="galerie/revolutie_bucuresti/1.jpg" alt="" class="imagine_gal"></div>
+	
+	</div>
+	
+	<div id="galerie2" class="galerie">
+		<h3 align="center">Memorialul Victemelor Comunismului [<span id="nr2">1</span>/7]</h3>
+		<form action="" id="bg2">
+		<table align="center" cellpadding="1" cellspacing="0" width="400">
+		<tr>		
+			<td width="80"><div align="center"><input type="button" name="p21" value="Prima" onclick="prima(2, 'galerie/memorialul/')" /></div></td>
+			<td width="120"><div align="center"><input type="button" name="p22" value="Inapoi" onclick="inapoi(2, 'galerie/memorialul/')" /></div></td>
+			<td width="120"><div align="center"><input type="button" name="p23" value="Inainte" onclick="inainte(2, 'galerie/memorialul/')" /></div></td>
+			<td width="80"><div align="center"><input type="button" name="p24" value="Ultima" onclick="ultima(2, 'galerie/memorialul/')" /></div></td>
+		</tr>
+		</table>		
+		</form>	
+		<div align="center"><img id="loc2" src="galerie/memorialul/1.jpg" alt="" class="imagine_gal"></div>
+	
+	</div>	
 </div>
 <!-- -------------- SFARSIT -------------- -->	
 		  </td>
