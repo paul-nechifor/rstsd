@@ -41,3 +41,5 @@ p.intrebare { text-indent:40px; }
 div#textul {
 background: url(images/banda.gif) repeat-x;
 }
+
+sup { font-size:13px;}
