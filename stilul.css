@@ -4,11 +4,12 @@
 	background:url(images/Template6_3.gif) repeat-x #d4c6a6;
 }*/
 h2 {
-font-family:Garamond, Georgia, "Times New Roman", Times, serif;
+font-family:"Times New Roman", Times, serif;
 font-size:30px;
 text-align:center;
-margin-top:-5px;
+margin-top:-8px;
 margin-bottom:50px;
+color:#BEA26D;
 }
 
 #lista_meniu {
@@ -35,3 +36,8 @@ text-align:justify;
 #lista_meniu a:active  { text-decoration:none;      color:#754928; }
 #lista_meniu a:hover   { text-decoration:none;      color:#754928; letter-spacing:1px; }
 
+p.intrebare { text-indent:40px; }
+
+div#textul {
+background: url(images/banda.gif) repeat-x;
+}

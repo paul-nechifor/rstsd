@@ -15,8 +15,8 @@ function puncte()
 	p=0;
 	k=[1,1,0,2,1,1,2,0,1]; //raspunsurile a=0,b=1,c=2
 	for (i="1",j=0; i<="9"; i++,j++)
-		if (document.getElementsByName("i1")[k[j]].checked==true) p++;
-	return (p)	
+		if (document.getElementsByName("i"+i)[k[j]].checked==true) p++;
+	return (p);
 }
 
 function calc()
@@ -28,7 +28,10 @@ function calc()
 			document.getElementsByName("i"+i)[j].disabled=true;
 			
 	p=puncte();
-	alert("Ai obtinut nota "+(p+1));	
+	//alert("Ai obtinut nota "+(p+1));
+	
+	ras=document.getElementById("raspuns");
+	ras.innerHTML = "Ai ob&#355;inut nota "+(p+1);
 }
 
 function verifica()
@@ -62,45 +65,46 @@ function verifica()
 	<h2>Test de evaluare</h2>
 	
 	<form id="test_evaluare" name="test_evaluare" action="" >	
-		<p>1. In anul 1968 are loc &bdquo;Primavara de la Praga&rdquo;, inabusita de armata sovietica. Nicolae Ceausescu va castiga capital politic in fata Occidentului deoarece:<br />
-			<input type="radio" name="i1" value="a" id="i1a"/> <label for="i1a">a) va participa la inabusirea revoltei din Cehoslovacia;</label><br />
-			<input type="radio" name="i1" value="b" id="i1b"/> <label for="i1b">b) va condamna interventia sovietica;</label><br />
-			<input type="radio" name="i1" value="c" id="i1c"/> <label for="i1c">c) va aprecia interventia sovietica.</label><br /></p>
-		<p>2. Atitudinea diferita de cea oficiala; dezacordul in raport cu majoritatea se numeste:<br />
+		<p class="intrebare">1. &Icirc;n anul 1968 are loc &bdquo;Primavara de la Praga&rdquo;, &icirc;nabu&#351;it&#259; de armata sovietic&#259;. Nicolae Ceau&#351;escu va c&acirc;&#351;tiga capital politic &icirc;n fa&#355;a Occidentului deoarece:<br />
+			<input type="radio" name="i1" value="a" id="i1a"/> <label for="i1a">a) va participa la &icirc;nabu&#351;irea revoltei din Cehoslovacia;</label><br />
+			<input type="radio" name="i1" value="b" id="i1b"/> <label for="i1b">b) va condamna interven&#355;ia sovietica;</label><br />
+			<input type="radio" name="i1" value="c" id="i1c"/> <label for="i1c">c) va aprecia interven&#355;ia sovietica.</label></p>
+		<p class="intrebare">2. Atitudinea diferit&#259; de cea oficial&#259;; dezacordul &icirc;n raport cu majoritatea se nume&#351;te:<br />
 			<input type="radio" name="i2" value="a" id="i2a"/> <label for="i2a">a) destalinizare;</label><br />
-			<input type="radio" name="i2" value="b" id="i2b"/> <label for="i2b">b) dizidenta;</label><br />
-			<input type="radio" name="i2" value="c" id="i2c"/> <label for="i2c">c) dusman al poporului.</label><br /></p>
-		<p>3. Concept aplicat in China maoista si transpus in practica in Romania prin Tezele din iulie 1971 se numeste:<br />
-			<input type="radio" name="i3" value="a" id="i3a"/> <label for="i3a">a) &bdquo;revolutie culturala&rdquo;;</label><br />
+			<input type="radio" name="i2" value="b" id="i2b"/> <label for="i2b">b) diziden&#355;&#259;;</label><br />
+			<input type="radio" name="i2" value="c" id="i2c"/> <label for="i2c">c) du&#351;man al poporului.</label></p>
+		<p class="intrebare">3. Concept aplicat &icirc;n China maoist&#259; &#351;i transpus &icirc;n practic&#259; &icirc;n Rom&acirc;nia prin Tezele din iulie 1971 se nume&#351;te:<br />
+			<input type="radio" name="i3" value="a" id="i3a"/> <label for="i3a">a) &bdquo;revolu&#355;ie cultural&#259;&rdquo;;</label><br />
 			<input type="radio" name="i3" value="b" id="i3b"/> <label for="i3b">b) sovietizare;</label><br />
-			<input type="radio" name="i3" value="c" id="i3c"/> <label for="i3c">c) ideocratie;</label><br /></p>
-		<p>4. Revolta anticeausista a fost declansata la 16 decembrie 1989, in:<br />
-			<input type="radio" name="i4" value="a" id="i4a"/> <label for="i4a">a) Iasi;</label><br />
-			<input type="radio" name="i4" value="b" id="i4b"/> <label for="i4b">b) Bucuresti;</label><br />
-			<input type="radio" name="i4" value="c" id="i4c"/> <label for="i4c">c) Timisoara;</label></p>
-		<p>5. Romania a semnat Actul final al Conferintei de la Helsinki, privind respectarea drepturilor fundamentale ale omului in anul:<br />
+			<input type="radio" name="i3" value="c" id="i3c"/> <label for="i3c">c) ideocra&#355;ie;</label><br /></p>
+		<p class="intrebare">4. Revolta anticeau&#351;ist&#259; a fost declan&#351;at&#259; la 16 decembrie 1989, &icirc;n:<br />
+			<input type="radio" name="i4" value="a" id="i4a"/> <label for="i4a">a) Ia&#351;i;</label><br />
+			<input type="radio" name="i4" value="b" id="i4b"/> <label for="i4b">b) Bucure&#351;ti;</label><br />
+			<input type="radio" name="i4" value="c" id="i4c"/> <label for="i4c">c) Timi&#351;oara;</label></p>
+		<p class="intrebare">5. Rom&acirc;nia a semnat Actul final al Conferin&#355;ei de la Helsinki, privind respectarea drepturilor fundamentale ale omului &acirc;n anul:<br />
 			<input type="radio" name="i5" value="a" id="i5a"/> <label for="i5a">a) 1965;</label><br />
 			<input type="radio" name="i5" value="b" id="i5b"/> <label for="i5b">b) 1975;</label><br />
 			<input type="radio" name="i5" value="c" id="i5c"/> <label for="i5c">c) 1987;</label></p>
-		<p>6. Prima constitutie democratica a Romaniei, dupa inlaturarea regimului Ceausescu, a fost adoptata in anul:<br />
+		<p class="intrebare">6. Prima constitu&#355;ie democratic&#259; a Rom&acirc;niei, dup&#259; &acirc;nl&#259;turarea regimului Ceau&#351;escu, a fost adoptat&#259; &icirc;n anul:<br />
 			<input type="radio" name="i6" value="a" id="i6a"/> <label for="i6a">a) 1923;</label><br />
 			<input type="radio" name="i6" value="b" id="i6b"/> <label for="i6b">b) 1991;</label><br />
 			<input type="radio" name="i6" value="c" id="i6c"/> <label for="i6c">c) 1996;</label></p>
-		<p>7. Ordine politica in care existenta mai multor partide politice permite cetatenilor sa-si exprime opinii si interese diferite intr-o confruntare libere, se numeste:<br />
+		<p class="intrebare">7. Ordine politic&#259; &acirc;n care existen&#355;a mai multor partide politice permite cet&#259;&#355;enilor s&#259;-&#351;i exprime opinii &#351;i interese diferite &icirc;ntr-o confruntare liber&#259;, se nume&#351;te:<br />
 			<input type="radio" name="i7" value="a" id="i7a"/> <label for="i7a">a) monopartidism;</label><br />
 			<input type="radio" name="i7" value="b" id="i7b"/> <label for="i7b">b) neocomunism;</label><br />
 			<input type="radio" name="i7" value="c" id="i7c"/> <label for="i7c">c) pluralism politic;</label></p>
-		<p>8. Ansamblul organizatiilor nonguvernamentale (O.N.G.), care include: fundatii, asociatii etnice, culturale, religioase si sindicatele, care au scopul de a apara cetatenii de abuzurile statului/guvernantilor formeaza:<br />
-			<input type="radio" name="i8" value="a" id="i8a"/> <label for="i8a">a) societatea civila;</label><br />
+		<p class="intrebare">8. Ansamblul organiza&#355;iilor nonguvernamentale (O.N.G.), care include: funda&#355;ii, asocia&#355;ii etnice, culturale, religioase &#351;i sindicatele, care au scopul de a apara cet&#259;&#355;enii de abuzurile statului/guvernan&#355;ilor formeaz&#259;:<br />
+			<input type="radio" name="i8" value="a" id="i8a"/> <label for="i8a">a) societatea civil&#259;;</label><br />
 			<input type="radio" name="i8" value="b" id="i8b"/> <label for="i8b">b) mass-media;</label><br />
-			<input type="radio" name="i8" value="c" id="i8c"/> <label for="i8c">c) societatea obsteasca;</label></p>
-		<p>9. Stat in care raporturile dintre autoritati si cetateni se bazeaza pe drept (legislatie, institutii) si care se supune controlului unor institutii juridice independente este un:<br />
+			<input type="radio" name="i8" value="c" id="i8c"/> <label for="i8c">c) societatea ob&#351;teasc&#259;;</label></p>
+		<p class="intrebare">9. Stat &icirc;n care raporturile dintre autorit&#259;&#355;i &#351;i cet&#259;&#355;eni se bazeaz&#259; pe drept (legisla&#355;ie, institu&#355;ii) &#351;i care se supune controlului unor institu&#355;ii juridice independente este un:<br />
 			<input type="radio" name="i9" value="a" id="i9a"/> <label for="i9a">a) stat totalitar;</label><br />
 			<input type="radio" name="i9" value="b" id="i9b"/> <label for="i9b">b) stat de drept;</label><br />
-			<input type="radio" name="i9" value="c" id="i9c"/> <label for="i9c">c) stat autoritat;</label></p>
+			<input type="radio" name="i9" value="c" id="i9c"/> <label for="i9c">c) stat autoritar;</label></p>
 		
-		<input type="button" name="evalueaza" value="Evalueaza" id="but" onclick="verifica()" />
-	</form>	  
+		<p align="center"><input type="button" name="evalueaza" value="Evalueaza" id="but" onclick="verifica()" /></p>
+	</form>
+	<p id="raspuns" align="center" style="font-size:20px;"></p>	  
 </div>
 <!-- -------------- SFARSIT -------------- -->	
 		  </td>
