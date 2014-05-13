@@ -1,7 +1,7 @@
 # România — de la statul totalitar la statul de drept
 
 A history themed web site I build in high school for a competition in 2006.
-Didn't win nothing.
+Didn't win nothing. See my [second participation][italia-fascista].
 
 ![Screenshot](screenshot.png)
 
@@ -15,5 +15,6 @@ process reasonably well.
 
 MIT
 
+[italia-fascista]: https://github.com/paul-nechifor/italia-fascista
 [rawgit]: https://rawgit.com/paul-nechifor/rstsd/master/index.html
 [content]: https://rawgit.com/paul-nechifor/rstsd/master/partea1.html
