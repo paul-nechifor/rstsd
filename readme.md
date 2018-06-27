@@ -1,3 +1,7 @@
+# This repository has been moved to [gitlab.com/paul-nechifor/rstsd](http://gitlab.com/paul-nechifor/rstsd).
+
+Old readme:
+
 # România — de la statul totalitar la statul de drept
 
 A history themed web site I build in high school for a competition in 2006.
